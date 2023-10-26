@@ -1,4 +1,5 @@
 import React from 'react'
+
 import Header from '../components/HomeComponents/Header';
 import Showcase from '../components/HomeComponents/Showcase';
 import FiveGreyLogos from '../components/HomeComponents/FiveGreyLogos';
@@ -17,18 +18,18 @@ const Home = () => {
   return (
     <>
     <Header />
-    <Showcase />
-    <FiveGreyLogos />
-    <Features />
-    <AboutCompany />
-    <OurServices />
-    <WhyChooseUs />
-    <ProjectAndCase />
-    <MeetOurTeam />
-    <Testimonial />
-    <ArticleAndNews />
-    <Newsletter />
-    <Footer />
+      <Showcase />
+      <FiveGreyLogos />
+      <Features />
+      <AboutCompany />
+      <OurServices />
+      <WhyChooseUs />
+      <ProjectAndCase />
+      <MeetOurTeam />
+      <Testimonial />
+      <ArticleAndNews />
+      <Newsletter />
+      <Footer />
     </>
   )
 }

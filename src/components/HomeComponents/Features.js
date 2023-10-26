@@ -3,6 +3,7 @@ import HandsIcon from '../../assets/images/hands.svg'
 import LampIcon from '../../assets/images/lamp.svg'
 import FinancialIcon from '../../assets/images/financial.svg'
 import SettingsIcon from '../../assets/images/settings.svg'
+import FeaturesBox from './FeaturesBox'
 
 const Feautres = () => {
   return (
@@ -21,30 +22,26 @@ const Feautres = () => {
 
                     <div className="all-icon-text">
 
-                        <div className="icon-text">
-                            <img src={HandsIcon} alt="Two hands holding"/>
-                            <h4>Business Advice</h4>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-
-                        <div className="icon-text">
-                            <img src={LampIcon} alt="Lamp with lights"/>
-                            <h4>Startup Business</h4>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-
-                        <div className="icon-text">
-                            <img src={FinancialIcon} alt="Small picture to Financial Advice"/>
-                            <h4>Financial Advice</h4>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-
-                        <div className="icon-text">
-                            <img src={SettingsIcon} alt="Small settings-design"/>
-                            <h4>Risk Management</h4>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-
+                       <FeaturesBox 
+                        icon={HandsIcon}
+                        title='Business Advice'
+                        imagedescription='Two hands holding'
+                       />
+                         <FeaturesBox 
+                        icon={LampIcon}
+                        title='Startup Business'
+                        imagedescription='Lamp with lights'
+                       />
+                         <FeaturesBox 
+                        icon={FinancialIcon}
+                        title='Financial Advice'
+                        imagedescription='Small picture to Financial Advice'
+                       />
+                         <FeaturesBox 
+                        icon={SettingsIcon}
+                        title='Risk Management'
+                        imagedescription='Small settings-design'
+                       />
                     </div>
                 </div>
             </div>
