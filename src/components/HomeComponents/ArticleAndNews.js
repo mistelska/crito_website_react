@@ -2,6 +2,8 @@ import React from 'react'
 import LadyArticleNews from '../../assets/images/last1.png'
 import GPTArticleNews from '../../assets/images/last2.png'
 import BooksArticleNews from '../../assets/images/last3.png'
+import { NavLink } from 'react-router-dom'
+import ArticleAndNewsBox from '../ArticleAndNewsBox'
 
 const ArticleAndNews = () => {
   return (
@@ -11,7 +13,7 @@ const ArticleAndNews = () => {
             <div className="caption-button">
 
                 <div className="text">
-                    <h4>Article & News</h4>
+                    <NavLink to='/news'><h4>Article & News</h4></NavLink>
                     <h2>Get Every Single Articles & News</h2>
                 </div>
 
@@ -22,92 +24,27 @@ const ArticleAndNews = () => {
             </div>
 
             <div className="middle">
-                <div className="pic-and-text">
-                    <a href="#">
-                        <div className="pic-and-yellow-box">
-
-                            <div className="yellow-box">
-                                <p><span>23</span>Mar</p>
-                            </div>
-
-                            <div>
-                                <img src={LadyArticleNews} alt="Picture of girl smiling"/>
-                            </div>
-
-                        </div>
-
-                        <div className="business">
-                            <p>Business</p>
-                        </div>
-
-                    </a>
-
-                    <div className="how-to-text">
-                        <h3>How To Use Digitalization <br/> In The Classroom</h3>
-                    </div>
-
-                    <div className="lorem">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero.</p>
-                    </div>
-
-                </div>
-
-                <div className="pic-and-text">
-                    <a href="#">
-                        <div className="pic-and-yellow-box">
-                            <div className="yellow-box">
-                                <p><span>17</span>Mar</p>
-                            </div>
-
-                            <div>
-                                <img src={GPTArticleNews} alt="Picture of a screen"/>
-                            </div>
-
-                        </div>
-
-                        <div className="business">
-                            <p>Business</p>
-                        </div>
-
-                    </a>
-
-                    <div className="how-to-text">
-                        <h3>How To Implement Chat GPT<br/>In Your Projects</h3>
-                    </div>
-
-                    <div className="lorem">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero.</p>
-                    </div>
-
-                </div>
-
-                <div className="pic-and-text">
-                    <a href="#">
-                        <div className="pic-and-yellow-box">
-                            <div className="yellow-box">
-                                <p><span>13</span>Mar</p>
-                            </div>
-
-                            <div>
-                                <img src={BooksArticleNews} alt="Picture of a Guide Book to learn CSS"/>
-                            </div>
-
-                        </div>
-
-                        <div className="business">
-                            <p>Business</p>
-                        </div>
-
-                    </a>
-
-                    <div className="how-to-text">
-                        <h3>The Guide To Support<br/>Modern CSS Design</h3>
-                    </div>
-
-                    <div className="lorem">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero.</p>
-                    </div>
-                </div>
+               <ArticleAndNewsBox 
+               image={LadyArticleNews}
+               imagedescription='A woman sitting on a chair and smiling.'
+               title='How To Use Digitalization In The Classroom'
+               dateday='25'
+               datemonth='Mar'
+               />
+               <ArticleAndNewsBox
+                image={GPTArticleNews}
+                imagedescription='A screen showing chat GPT.'
+                title='How To Implement Chat GPT In Your Projects'
+                dateday='17'
+                datemonth='Mar'
+               />
+               <ArticleAndNewsBox
+                image={BooksArticleNews}
+                imagedescription='Two books laying on a table white a smartphone on top of them.'
+                title='The Guide To Support Modern CSS Design'
+                dateday='13'
+                datemonth='Mar'
+               />
             </div>
 
             <div className="dots">

@@ -1243,11 +1243,22 @@ header {
                 justify-content: center;
             }
 
-            h4 {
-                color: #F94D1C;
-                font-size: 1.1rem;
-                padding-bottom: 1.25rem;
+            a{
+                text-decoration: none;
+                h4 {
+               
+                    color: #F94D1C;
+                    font-size: 1.1rem;
+                    padding-bottom: 1.25rem;
+
+                    &:hover {
+                        text-decoration: underline;
+                        color:#191919;
+                    }
+                }
             }
+
+        
             h2 {
                 font-size: 2.8rem;
                 font-weight: 700;
@@ -1588,6 +1599,8 @@ header {
 .map iframe {
     padding-top: 5rem;
     height: 35rem;
+    width: 100%;
+    border: none;
 
     @media (max-width: 576px) {
         padding-top: 2rem;
@@ -1691,6 +1704,32 @@ header {
                     transform: scale(1.4) translateY(-3px);
                 }
             }
+        }
+    }
+}
+
+.error-box {
+    background-color: #F0EFE9;
+    border: 1.5rem solid #0e1021;
+
+    .box {
+        padding: 8rem 1rem;
+        margin: 2rem;
+        border-radius: 1rem;
+        text-align: center;
+    
+        .error-icon {
+            
+            h1 {
+                font-size: 2rem;
+                font-weight: 700;
+            }
+            i {
+                font-size: 4.5rem;
+            }
+        }
+        p {
+            font-size: 1rem;
         }
     }
 }

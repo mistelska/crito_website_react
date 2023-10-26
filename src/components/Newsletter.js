@@ -1,5 +1,5 @@
 import React from 'react'
-import Line from '../../assets/images/linje1.png'
+import Line from '../assets/images/linje1.png'
 
 const Newsletter = () => {
   return (

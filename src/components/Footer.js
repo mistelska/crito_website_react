@@ -1,13 +1,15 @@
 import React from 'react'
-import CritoFooter from '../../assets/images/logoend.svg'
-import LinesFooter from '../../assets/images/line-down.svg'
+import CritoFooter from '../assets/images/logoend.svg'
+import LinesFooter from '../assets/images/line-down.svg'
+import { NavLink } from 'react-router-dom'
+import ScrollToTop from '../assets/BtnFunctions/ScrollToTop'
+
 
 
 const Footer = () => {
   return (
     <footer>
         <div className="footer">
-
             <div className="lines">
                 <img src={LinesFooter} alt="White wavy lines"/>
             </div>
@@ -17,7 +19,7 @@ const Footer = () => {
                 <div className="top">
 
                     <div className="logo-text">
-                        <a href="index.html"><img src={CritoFooter} alt="crito logotype"/> </a>
+                        <NavLink to='/'><img src={CritoFooter} alt="crito logotype" onClick={ScrollToTop}/></NavLink>
                         <p>Lorem ipsum dolor sit amet consectetur<br/>adipisicing elit. Placeat obcaecati voluptas<br/>voluptates! Voluptates laborum nam<br/>ratione minus necessitatibus, iure<br/>praesentium.</p>
                     </div>
 
