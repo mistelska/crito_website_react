@@ -1586,3 +1586,69 @@ header .container .menu .btn-login {
 .error-box .box p {
   font-size: 1rem;
 }
+
+.title {
+  padding: 0 17rem;
+}
+.title h2 {
+  padding-top: 7rem;
+  padding-bottom: 2rem;
+  font-weight: 700;
+  font-size: 2.6rem;
+}
+.title .article-news .all-pictures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.title .article-news .all-pictures .pic-and-text {
+  position: relative;
+  padding-bottom: 3rem;
+}
+.title .article-news .all-pictures .pic-and-text a {
+  color: #191919;
+  text-decoration: none;
+}
+.title .article-news .all-pictures .pic-and-text a .pic-and-yellow-box .yellow-box {
+  color: #191919;
+  position: absolute;
+  left: 0.9rem;
+  top: 0.9rem;
+  background-color: #F9D783;
+  width: 3.4rem;
+  height: 3.75rem;
+}
+.title .article-news .all-pictures .pic-and-text a .pic-and-yellow-box .yellow-box span {
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  display: grid;
+  grid-template-rows: 0.75rem 0.75rem;
+  padding-top: 8px;
+}
+.title .article-news .all-pictures .pic-and-text a .pic-and-yellow-box .yellow-box p {
+  text-align: center;
+}
+.title .article-news .all-pictures .pic-and-text a .business p {
+  padding-top: 1.9rem;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.title .article-news .all-pictures .pic-and-text a:hover {
+  color: #F94D1C;
+  text-decoration: underline;
+}
+.title .article-news .all-pictures .pic-and-text .how-to-text h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: "DM Sans", sans-serif;
+}
+.title .article-news .all-pictures .pic-and-text .lorem p {
+  padding-top: 0.9rem;
+}
+@media (max-width: 1400px) {
+  .title .article-news .all-pictures .pic-and-text .lorem p {
+    max-width: 20rem;
+  }
+}

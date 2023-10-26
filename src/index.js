@@ -6,9 +6,10 @@ import Home from './views/Home'
 import News from './views/News'
 import Contact from './views/Contact'
 import NotFound from './views/NotFound'
-
+import ArticleAndNews from './components/HomeComponents/ArticleAndNews';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import NewsDetails from './views/NewsDetails';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -17,6 +18,7 @@ root.render(
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/news' element={<News/>} />
+          <Route path='/articleandnews' element={<NewsDetails/>} />
           <Route path='/contact' element={<Contact/>} />
           <Route path='*' element={<NotFound/>} />
         </Routes>

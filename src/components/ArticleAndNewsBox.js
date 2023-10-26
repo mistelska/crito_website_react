@@ -1,10 +1,11 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-const ArticleAndNewsBox = ({image, imagedescription, dateday, datemonth, title}) => {
+const ArticleAndNewsBox = ({info, image, imagedescription, dateday, datemonth, title, titlesecond}) => {
   return (
     <div>
         <div className="pic-and-text">
-            <a href="#">
+            <NavLink to={info}>
                 <div className="pic-and-yellow-box">
 
                     <div className="yellow-box">
@@ -21,14 +22,14 @@ const ArticleAndNewsBox = ({image, imagedescription, dateday, datemonth, title})
                     <p>Business</p>
                 </div>
 
-            </a>
+            </NavLink>
 
             <div className="how-to-text">
-                <h3>{title}</h3>
+                <h3>{title}<br/>{titlesecond}</h3>
             </div>
 
             <div className="lorem">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.<br/>Architecto sed hic libero.</p>
             </div>
 
         </div>
