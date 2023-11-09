@@ -2,13 +2,11 @@ import React from 'react'
 import CritoStart from '../assets/images/logostart.svg'
 import { NavLink } from 'react-router-dom'
 
-
 const Header = () => {
   return (
     <header>
         <div className="container">
             <button className="btn-menubars" ><i className="fa-solid fa-bars-staggered"></i></button>
-
             <div className="logo">
                 <NavLink to='/'>
                 <img src={CritoStart} alt="crito logotype"/> </NavLink>
@@ -39,7 +37,7 @@ const Header = () => {
             <div className="menu">
                 <nav>
                     <NavLink to="/">Home</NavLink>
-                    <NavLink to="/news">News</NavLink>
+                    <NavLink to="*">News</NavLink>
                     <NavLink to="*">Service</NavLink>
                     <NavLink to="/contact">Contact</NavLink>
                 </nav>

@@ -12,7 +12,7 @@ const ProjectAndCase = () => {
 
             <div className="section-title">
                 <p>Project & Case Studies</p>
-                <h2>Let´s Looks Our Global Projects</h2>
+                <h2>Let&rsquo;s Looks Our Global Projects</h2>
             </div>
 
             <div className="project-and-cases">

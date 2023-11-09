@@ -10,7 +10,7 @@ const Showcase = () => {
             <div className="caption">
                 <NavLink to='/'>Home</NavLink>
                 <NavLink to='/contact'><span>Contact</span></NavLink>
-                <h2>Let´s Connect</h2>
+                <h2>Let&rsquo;s Connect</h2>
             </div>
         </div>
     </section>

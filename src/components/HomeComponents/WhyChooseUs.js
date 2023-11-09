@@ -37,7 +37,7 @@ const WhyChooseUs = () => {
                     />
                     <WhyChooseUsBox
                         icon={IconHead}
-                        imagedescription='Small design of a cogwheel inside of a hea'
+                        imagedescription='Small design of a cogwheel inside of a head'
                         title='Artificial Inteligence'
                     />
                     

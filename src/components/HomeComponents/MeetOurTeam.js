@@ -3,6 +3,7 @@ import MeetOurTeamKristine from '../../assets/images/profile1.png'
 import MeetOurTeamMark from '../../assets/images/profile2.png'
 import MeetOurTeamKimberly from '../../assets/images/profile3.png'
 import MeetOurTeamJustin from '../../assets/images/profile4.png'
+import MeetOurTeamBox from './MeetOurTeamBox'
 
 const MeetOurTeam = () => {
   return (
@@ -23,32 +24,30 @@ const MeetOurTeam = () => {
             </div>
 
             <div className="all-pics-and-info">
-
-                <div className="pic-and-info">
-                    <img src={MeetOurTeamKristine} alt="Picture of Kristine Palmer"/>
-                    <h3>Kristine Palmer</h3>
-                    <p>Chef Operation Officer</p>
-                </div>
-
-                <div className="pic-and-info">
-                    
-                    <img src={MeetOurTeamMark} alt="Picture of Mark Aburi"/>
-                    <h3>Mark Aburi</h3>
-                    <p>Senior Consultant</p>
-                </div>
-
-                <div className="pic-and-info">
-                    <img src={MeetOurTeamKimberly} alt="Picutre of Kimberly Hansen"/>
-                    <h3>Kimberly Hansen</h3>
-                    <p>Senior Consultant</p>
-                </div>
-
-                <div className="pic-and-info">
-                    <img src={MeetOurTeamJustin} alt="Picture of Justin Willoman"/>
-                    <h3>Justin Willoman</h3>
-                    <p>Senior Tech Consultant</p>
-                </div>
-
+                <MeetOurTeamBox 
+                    image={MeetOurTeamKristine}
+                    imagedescription='Picture of Kristine Palmer'
+                    name='Kristine Palmer'
+                    title='Chef Operation Officer'
+                />
+                  <MeetOurTeamBox 
+                    image={MeetOurTeamMark}
+                    imagedescription='Picture of Mark Aburi'
+                    name='Mark Aburi'
+                    title='Senior Consultant'
+                />
+                  <MeetOurTeamBox 
+                    image={MeetOurTeamKimberly}
+                    imagedescription='Picture of Kimberly Hansen'
+                    name='Kimberly Hansen'
+                    title='Senior Consultant'
+                />
+                  <MeetOurTeamBox 
+                    image={MeetOurTeamJustin}
+                    imagedescription='Picture of Justin Willoman'
+                    name='Justin Willoman'
+                    title='Senior Tech Consultant'
+                />
             </div>
 
             <div className="dots">

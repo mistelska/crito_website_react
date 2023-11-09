@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-const ArticleAndNewsBox = ({info, image, imagedescription, dateday, datemonth, title, titlesecond}) => {
+const ArticleAndNewsBox = ({info, image, imagedescription, dateday, datemonth, title}) => {
   return (
     <div>
         <div className="pic-and-text">
@@ -23,15 +23,16 @@ const ArticleAndNewsBox = ({info, image, imagedescription, dateday, datemonth, t
                 </div>
 
             </NavLink>
-
+            <div className='text-under-pic'>
             <div className="how-to-text">
-                <h3>{title}<br/>{titlesecond}</h3>
+                <h3>{title}</h3>
             </div>
 
             <div className="lorem">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.<br/>Architecto sed hic libero.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero.</p>
             </div>
-
+            </div>
+         
         </div>
     </div>
   )

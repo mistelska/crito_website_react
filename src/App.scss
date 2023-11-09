@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap'); //inter
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700;9..40,900&family=Inter:wght@300;400;500;700;900&display=swap');
 
-// JAG HAR STYLAT MED SCSS 
+// JAG HAR STYLAT MED SCSS
+// MIN GAMLA KOD ÄR GJORD DESKTOP FIRST
+// MIN NYA KOD ÄR GJORD MOBILE FIRST
 
 html, body {
     color: #191919;
@@ -115,6 +117,7 @@ html, body {
 }
 
 .buttons-yellow {
+    border: #d3b770;
     background-color: #F9D783;
     color: #191919;
     text-decoration: none;
@@ -183,6 +186,8 @@ html, body {
         box-shadow: 0.4rem 0.4rem 0.3rem 0 #4643255d;
     }
 }
+
+
 
 .center-content {
     display: flex;
@@ -1499,16 +1504,13 @@ header {
                 @media (max-width: 992px) {
                     padding: 0;
                     border: none;
-                }
-
-                @media (max-width: 885px) {
-                    display: block;
                     text-align: center;
-                    
+
                     .btn-black-contact {
                         display: none;
                     }
                 }
+
 
                 @media (max-width: 576px) {
                     font-size: 0.8rem;
@@ -1534,7 +1536,9 @@ header {
                         border: solid 0.05rem #191919;
                     }
                 }
-
+                p {
+                    margin: 0;
+                }                    
                 h4 {
                     font-weight: 700;
                     font-family: 'DM Sans', sans-serif;
@@ -1570,6 +1574,33 @@ header {
                 }
             }
 
+            .error {
+                display: flex;
+                justify-content: center;
+                gap: 0.2rem;
+                color:rgb(219, 30, 30);
+                text-align: center;
+                font-size: 1.1rem;
+                margin: 0;
+                padding: 0;
+            
+                i {
+                    font-size: 1.5rem;
+                }
+            }
+            .error-message {
+                background-color: rgb(216, 27, 27);
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                gap: 0.2rem;
+                color:rgb(255, 255, 255);
+                text-align: center;
+                font-size: 1.1rem;
+                margin: 0;
+                padding: 0;
+            }
+
             form {
                 display: grid;
                 grid-template-rows: repeat(4) auto;
@@ -1580,6 +1611,9 @@ header {
                     border-radius: 1.6rem;
                     border: none;
                     outline: none;
+                }
+                span {
+                    display: none;
                 }
                 textarea {
                     padding: 0.9rem 1.9rem;
@@ -1713,106 +1747,107 @@ header {
     border: 1.5rem solid #0e1021;
 
     .box {
-        padding: 8rem 1rem;
+        padding: 15rem 1rem;
         margin: 2rem;
         border-radius: 1rem;
         text-align: center;
-    
+
         .error-icon {
-            
+          
             h1 {
+                padding-bottom: 2rem;
                 font-size: 2rem;
                 font-weight: 700;
             }
             i {
-                font-size: 4.5rem;
+                font-size: 6rem;
+                padding-bottom: 2rem;
             }
         }
         p {
-            font-size: 1rem;
+            font-size: 0.9rem;
+            padding-bottom: 2rem;
+        }
+        .buttons-transparent {
+            @media (min-width: 992px) {
+                padding: 1.2rem 5rem;
+            }
         }
     }
 }
-
-
-.title {
-    padding: 0 17rem;
-
-    h2 {
-        padding-top: 7rem;
-        padding-bottom: 2rem;
-        font-weight: 700;
-        font-size: 2.6rem;
-    }
+.article-and-news-page {
+    padding-top: 8.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     
-    .article-news {
-        .all-pictures {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            
-            .pic-and-text {
-                position: relative;
-                padding-bottom: 3rem;
-                   
-                a {
+    @media (min-width: 400px) {
+        text-align: start;
+    }
+
+    
+
+    .pic-and-text {
+        position: relative;
+
+        a {
+            color: #191919;
+            text-decoration: none;
+            .pic-and-yellow-box {
+
+                .yellow-box {
+                    
                     color: #191919;
-                    text-decoration: none;
-                    .pic-and-yellow-box {
-                        .yellow-box {
-                            
-                            color: #191919;
-                            position: absolute;
-                            left: 0.9rem;
-                            top: 0.9rem;
-                            background-color: #F9D783;
-                            width: 3.4rem;
-                            height: 3.75rem;
-                            
-                            span {
-                                text-align: center;
-                                font-size: 1.4rem;
-                                font-family: 'DM Sans', sans-serif;
-                                font-weight: 700;
-                                display: grid;
-                                grid-template-rows: 0.75rem 0.75rem;
-                                padding-top: 8px;
-                            }
-                            p {
-                                text-align: center;
-                            }
-                        }
-                    }
-            
-                    .business {
-                        p {
-                            padding-top: 1.9rem;
-                            text-decoration: none;
-                            font-size: 1rem;
-                        }
-                    }
-            
-                    &:hover {
-                        color: #F94D1C;
-                        text-decoration: underline;
-                    }
-                }
-                
-                .how-to-text {
-                    h3 {
+                    position: absolute;
+                    left: 0.9rem;
+                    top: 0.9rem;
+                    background-color: #F9D783;
+                    width: 3.4rem;
+                    height: 3.75rem;
+
+                    span {
+                        text-align: center;
                         font-size: 1.4rem;
-                        font-weight: 700;
                         font-family: 'DM Sans', sans-serif;
+                        font-weight: 700;
+                        display: grid;
+                        grid-template-rows: 0.75rem 0.75rem;
+                        padding-top: 8px;
+                    }
+                    p {
+                        text-align: center;
                     }
                 }
-            
-                .lorem {
-                    p {
-                        padding-top: 0.9rem;
-                        @media (max-width: 1400px) {
-                            max-width: 20rem;
-                        }
-                    }
+            }
+
+            .business {
+                p {
+                    padding-top: 1.9rem;
+                    text-decoration: none;
+                    font-size: 1rem;
+                }
+            }
+
+            &:hover {
+                color: #F94D1C;
+                text-decoration: underline;
+            }
+        }
+        .pic-and-text {
+            .how-to-text {
+                h3 {
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    font-family: 'DM Sans', sans-serif;
+                }
+            }
+    
+            .lorem {
+                p {
+                    padding-top: 0.9rem;
+                    padding-bottom: 2rem;
                 }
             }
         }

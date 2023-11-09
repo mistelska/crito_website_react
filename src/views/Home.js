@@ -16,7 +16,7 @@ import Footer from '../components/Footer';
 
 const Home = () => {
   return (
-    <div className='wrapper'>
+    <div className='wrapper-grid'>
       <Header />
       <main>
         <Showcase />

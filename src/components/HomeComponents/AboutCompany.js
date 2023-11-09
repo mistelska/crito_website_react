@@ -4,6 +4,7 @@ import ladyBlue from '../../assets/images/lady.png'
 const AboutCompany = () => {
   return (
     <section className="about-company">
+
         <div className="container">
 
             <div className="pic-of-lady-and-text">

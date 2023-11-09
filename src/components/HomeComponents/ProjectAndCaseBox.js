@@ -7,7 +7,7 @@ const ProjectAndCaseBox = ({img, imgdescription, title}) => {
         <h3>{title}</h3>
         <div className="readmore">Read More<i className="fa-regular fa-arrow-up-right"></i></div>
     </a>
-)
+ )
 }
 
 export default ProjectAndCaseBox

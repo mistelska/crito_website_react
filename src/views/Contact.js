@@ -8,7 +8,7 @@ import Footer from '../components/Footer'
 
 const Contacts = () => {
   return (
-    <div className='wrapper'>
+    <div className='wrapper-grid'>
     <Header />
     <main>
       <Showcase />

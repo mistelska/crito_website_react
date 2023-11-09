@@ -4,8 +4,6 @@ import LinesFooter from '../assets/images/line-down.svg'
 import { NavLink } from 'react-router-dom'
 import ScrollToTop from '../assets/BtnFunctions/ScrollToTop'
 
-
-
 const Footer = () => {
   return (
     <footer>
