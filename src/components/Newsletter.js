@@ -1,5 +1,6 @@
 import React from 'react'
 import Line from '../assets/images/linje1.png'
+import ButtonYellow from '../assets/BtnFunctions/ButtonYellow'
 
 const Newsletter = () => {
   return (
@@ -14,7 +15,7 @@ const Newsletter = () => {
 
             <form>
                 <input type="text" placeholder="username@domain.com"/>
-                <button className="buttons-yellow">Subscribe<i className="fa-regular fa-arrow-up-right"></i></button>
+                <ButtonYellow text="Subscribe"/>
             </form>
 
         </div>

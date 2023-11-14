@@ -1,6 +1,7 @@
 import React from 'react'
 import BgLineOurServices from '../../assets/images/line-our-services.svg'
 import OurServicesBox from './OurServicesBox'
+import ButtonTransparent from '../../assets/BtnFunctions/ButtonTransparent'
 
 const OurServices = () => {
   return (
@@ -31,7 +32,7 @@ const OurServices = () => {
             </div>
 
             <div className="button">
-                <a className="buttons-transparent" href="#">Browse Services<i className="fa-regular fa-arrow-up-right"></i></a>
+                <ButtonTransparent text="Brows Services"/>
             </div>
         </div>
     </section>

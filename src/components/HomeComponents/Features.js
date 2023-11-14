@@ -4,6 +4,7 @@ import LampIcon from '../../assets/images/lamp.svg'
 import FinancialIcon from '../../assets/images/financial.svg'
 import SettingsIcon from '../../assets/images/settings.svg'
 import FeaturesBox from './FeaturesBox'
+import ButtonYellow from '../../assets/BtnFunctions/ButtonYellow'
 
 const Feautres = () => {
   return (
@@ -16,7 +17,7 @@ const Feautres = () => {
                         <p>Features</p>
                         <h2>Our Accounting is trusted by thousand of companies</h2>
                         <div className="button">
-                            <a className="buttons-yellow" href="#">Learn More<i className="fa-regular fa-arrow-up-right"></i></a>
+                        <ButtonYellow text="Learn More"/>
                         </div>
                     </div>
 

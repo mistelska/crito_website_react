@@ -1,117 +1,119 @@
 import React, { useState } from 'react'
 
-const Form= () => {
-
-    const[firstName, setFirstName] =useState ('')
-    const[firstNameError, setFirstNameError] =useState (false)
-    const[email, setEmail] =useState ('')
-    const[emailError, setEmailError] =useState (false)
-    const[message, setMessage] =useState ('')
-    const[messageError, setMessageError] =useState (false)
-    const[messageSubmitted, setMessageSubmitted] =useState (false)
-
+const Formtest = () => {
+    const [name, setName] = useState('')
+    const [nameError, setNameError] = useState(false)
+    const [email, setEmail] = useState('')
+    const [emailError, setEmailError] = useState(false)
+    const [message, setMessage] = useState('')
+    const [messageError, setMessageError] = useState(false)
     const[error, setError] =useState ('')
+    const[submitted, setSubmitted] =useState('')
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
-      switch (name) {
-        case 'firstName' :
-            setFirstName(value)
-            setFirstNameError(validateLength(value,1))
-            break
-        case 'email' :
-            setEmail(value)
-            setEmailError(validateLength(value,3))
-            break
-        case 'message' :
-            setMessage(value)
-            setMessageError(validateLength(value,2))
-            break
+        switch (e.target.id) {
+            case 'name':
+                setName(e.target.value)
+                setNameError(validateLength(e.target.value, 1))
+            break;
+            case 'email':
+                setEmail(e.target.value)
+                setEmailError(validateEmail(e.target.value))
+            break;
+            case 'message':
+                setMessage(e.target.value)
+                setMessageError(validateLength(e.target.value, 3))
+            break;
         }
     }
 
-    const validateLength = (value, minLength =1) => {
-        return value.length < minLength;
+    const validateEmail =(email) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email) ? '' : 'Invalid email.';
+    }
+
+    const validateLength = (value, minimumLength = 1) => {
+        if (value.length < minimumLength)
+            return true
+        return false
     }
 
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-        const user = {firstName, email, message}
+        if ( nameError || emailError || messageError) {
+            setError('Fill in all fields correctly!')
+            setSubmitted('')
+            return;
+        }
+
+        const user = {name, email, message}
         const json = JSON.stringify(user)
-        const result = await fetch('https://win23-assignment.azurewebsites.net/api/contactform', {
+
+        const result = await fetch ('https://win23-assignment.azurewebsites.net/api/contactform', {
             method: 'post',
             headers: {
-                'content-type': 'application/json'
+            'content-type' : 'application/json'
             },
             body: json
         })
 
         switch (result.status) {
             case 200: 
-                clearForm()
-                messageSubmitted(
-                alert ('Your message has been received. Press OK to proceed. ')
-                )
-                console.log('Form submitted correctly.')
-                break;
-            case 400: setError(
-                <div className='error'>
-                    <i class="fa-sharp fa-solid fa-triangle-exclamation"></i>
-                    <p>Fill in all fields correctly.</p>
-                </div>
-            )  
+            setSubmitted('Thank you for the message!')
+                console.log('Form submitted!')
+                clearForm('')
+            break;
+
+            case 400: 
+            setSubmitted('')
+            setError('Fill in all fields correctly!')
                 console.log('Form not submitted.')
-                break;
+            break;
         }
     }
+
     const clearForm = () => {
-        setFirstName('')
+        setName('')
         setEmail('')
         setMessage('')
         setError('')
+        setNameError('')
+        setEmailError('')
+        setMessageError('')
     }
-   
 
   return (
-    <div>
-        <form onSubmit={handleSubmit} noValidate>
-            <p className='error'>{error}</p> 
-            
-            <input
-            type="text"
-            name='name'
-            placeholder="Name*" 
-            value ={firstName} 
-            onChange={(e) => handleChange(e)}/>
-            {firstNameError && <p className='error-message'>Fill in your name!</p>}
+    <form onSubmit={handleSubmit} noValidate> 
+        <p className='error-main'>{error}</p> 
+        <input 
+        type="text"
+        id='name'
+        placeholder='Name*'
+        value={name} 
+        onChange={(e) => handleChange(e)}></input>
+        {nameError && <p className='error'>Fill in your name, please.</p>}
 
-            <input 
-            type="email"
-            name='email' 
-            placeholder="Email*"
-            value={email} 
-            onChange={(e) => handleChange(e)}/>
-            {emailError && <p className='error-message'>Fill in your email!</p>}
+        <input 
+        type="email" 
+        id='email'
+        placeholder='Email*' 
+        value={email} 
+        onChange={(e) => handleChange(e)}></input>
+        {emailError && <p className='error'>Fill in your email, please.</p>}
 
+        <textarea 
+        type="text" 
+        id='message'
+        placeholder='Your Message*' 
+        value={message} 
+        onChange={(e) => handleChange(e)}></textarea>
+        {messageError && <p className='error'>You need to write a message first!</p>}
 
-            <textarea 
-            type="text" 
-            name='message' 
-            placeholder="Your Message*" 
-            value={message} 
-            onChange={(e) => handleChange(e)}></textarea>
-            {messageError && <p className='error-message'>You need to right a message to send in!</p>}
-
-
-            <button
-            className='buttons-yellow' 
-            type='submit' 
-            >Send Message<i 
-            className="fa-regular fa-arrow-up-right"></i></button>
-        </form> 
-    </div>
+        <button className='buttons-yellow' type='submit'>Send Message<i className="fa-regular fa-arrow-up-right"></i></button>
+        <p className='submitted'>{submitted}</p>
+    </form>
   )
 }
 
-export default Form
+export default Formtest

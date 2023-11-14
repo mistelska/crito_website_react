@@ -4,6 +4,7 @@ import GlassesProject from '../../assets/images/glasses.png'
 import BookProject from '../../assets/images/book.png'
 import LaptopProject from '../../assets/images/computer.png'
 import ProjectAndCaseBox from './ProjectAndCaseBox'
+import ButtonBlack from '../../assets/BtnFunctions/ButtonBlack'
 
 const ProjectAndCase = () => {
   return (
@@ -39,7 +40,7 @@ const ProjectAndCase = () => {
             </div>
 
             <div className="center-content">
-                <a className="buttons-black" href="projects.html">All Recent Projects<i className="fa-regular fa-arrow-up-right"></i></a>
+                <ButtonBlack text="All Recent Projects"/>
             </div>
 
         </div>

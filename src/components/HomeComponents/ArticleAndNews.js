@@ -4,6 +4,7 @@ import GPTArticleNews from '../../assets/images/last2.png'
 import BooksArticleNews from '../../assets/images/last3.png'
 import { NavLink } from 'react-router-dom'
 import ArticleAndNewsBox from '../ArticleAndNewsBox'
+import ButtonTransparent from '../../assets/BtnFunctions/ButtonTransparent'
 
 const ArticleAndNews = () => {
   return (
@@ -18,7 +19,7 @@ const ArticleAndNews = () => {
                 </div>
 
                 <div className="button">
-                    <a className="buttons-transparent" href="projects.html">Brows Articles<i className="fa-regular fa-arrow-up-right"></i></a>
+                    <ButtonTransparent text="Brows Articles"/>
                 </div>
 
             </div>

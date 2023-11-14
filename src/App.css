@@ -397,15 +397,15 @@ header .container .menu .btn-login {
     text-align: left;
   }
 }
-.showcase .container .content a {
+.showcase .container .content .two-buttons {
   margin-right: 0px;
-  display: block;
+  display: flex;
   margin-bottom: 1.25rem;
 }
-@media (min-width: 768px) {
-  .showcase .container .content a {
-    display: inline-block;
-    margin-right: 0.6rem;
+@media (max-width: 1200px) {
+  .showcase .container .content .two-buttons {
+    gap: 1rem;
+    justify-content: center;
   }
 }
 .showcase img {
@@ -1295,11 +1295,7 @@ header .container .menu .btn-login {
   border-radius: 1.6rem;
   outline: none;
   border: 1px solid #DAD9D3;
-  margin-right: 1.25rem;
-}
-.newsletter .container form .buttons-yellow {
-  border: none;
-  margin-top: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .showcase-contact {
@@ -1444,23 +1440,28 @@ header .container .menu .btn-login {
     font-size: 1.8rem;
   }
 }
-.middle .container .contact-box form {
-  display: grid;
-  grid-template-rows: repeat(4) auto;
-  row-gap: 1rem;
-}
-.middle .container .contact-box form .error {
+.middle .container .contact-box .submitted {
   display: flex;
   justify-content: center;
   gap: 0.2rem;
-  color: rgb(219, 30, 30);
-  text-align: center;
+  color: rgb(32, 163, 20);
   font-size: 1.1rem;
   margin: 0;
   padding: 0;
 }
-.middle .container .contact-box form .error i {
-  font-size: 1.5rem;
+.middle .container .contact-box .error-main {
+  display: flex;
+  justify-content: center;
+  gap: 0.2rem;
+  color: rgb(219, 30, 30);
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 0;
+}
+.middle .container .contact-box form {
+  display: grid;
+  grid-template-rows: repeat(4) auto;
+  row-gap: 1rem;
 }
 .middle .container .contact-box form input {
   padding: 0.9rem 1.9rem;
@@ -1480,6 +1481,20 @@ header .container .menu .btn-login {
 }
 .middle .container .contact-box form .buttons-yellow {
   margin-top: 2rem;
+}
+
+.error {
+  background-color: rgba(240, 52, 52, 0.548);
+  border-bottom: solid 0.2rem #F94D1C;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  text-align: center;
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 0;
 }
 
 .map iframe {

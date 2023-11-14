@@ -4,6 +4,7 @@ import MeetOurTeamMark from '../../assets/images/profile2.png'
 import MeetOurTeamKimberly from '../../assets/images/profile3.png'
 import MeetOurTeamJustin from '../../assets/images/profile4.png'
 import MeetOurTeamBox from './MeetOurTeamBox'
+import ButtonTransparent from '../../assets/BtnFunctions/ButtonTransparent'
 
 const MeetOurTeam = () => {
   return (
@@ -18,7 +19,7 @@ const MeetOurTeam = () => {
                 </div>
 
                 <div className="button">
-                    <a className="buttons-transparent" href="#">Brows Team<i className="fa-regular fa-arrow-up-right"></i></a>
+                  <ButtonTransparent text="Brows Team"/>
                 </div>
 
             </div>
@@ -57,7 +58,6 @@ const MeetOurTeam = () => {
                 <a className="dot-upp" href="#"></a>
                 <a className="dot-upp" href="#"></a>
             </div>
-
         </div>
     </section>
   )

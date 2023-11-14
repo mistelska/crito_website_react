@@ -36,7 +36,6 @@ const Middle = () => {
                 <div>
                     <h3>Leave us a message<br/>for any information</h3>
                 </div>
-
                 <Form/>
 
             </div>

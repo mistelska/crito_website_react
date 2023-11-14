@@ -1,5 +1,6 @@
 import React from 'react'
 import ladyBlue from '../../assets/images/lady.png'
+import ButtonBlack from '../../assets/BtnFunctions/ButtonBlack'
 
 const AboutCompany = () => {
   return (
@@ -28,9 +29,7 @@ const AboutCompany = () => {
                 
                 <div className="buttons">
 
-                    <div clxass="button">
-                        <a className="buttons-black" href="#">Learn More<i className="fa-regular fa-arrow-up-right"></i></a>
-                    </div>
+                    <ButtonBlack text="Learn More"/>
                 
                     <a className="btn-and-text" href="#">
                         <div className="play-btn"><i className="fa-solid fa-play"></i></div>

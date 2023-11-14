@@ -3,6 +3,7 @@ import PicTestimonial1 from '../../assets/images/round1.png'
 import PicTestimonial2 from '../../assets/images/round2.png'
 import PicTestimonial3 from '../../assets/images/round3.png'
 import TestimonialBox from './TestimonialBox'
+import ButtonBlack from '../../assets/BtnFunctions/ButtonBlack'
 
 const Testimonial = () => {
   return (
@@ -39,7 +40,7 @@ const Testimonial = () => {
                 </div>
 
                 <div className="button">
-                    <a className="buttons-black" href="projects.html">All Reviews<i className="fa-regular fa-arrow-up-right"></i></a>
+                    <ButtonBlack text="All Reviews"/>
                 </div>
             </div>
         </div>
