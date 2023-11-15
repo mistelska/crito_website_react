@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Formtest = () => {
+const Form = () => {
     const [name, setName] = useState('')
     const [nameError, setNameError] = useState(false)
     const [email, setEmail] = useState('')
@@ -60,7 +60,7 @@ const Formtest = () => {
 
         switch (result.status) {
             case 200: 
-            setSubmitted('Thank you for the message!')
+            setSubmitted('Thank you for your message!')
                 console.log('Form submitted!')
                 clearForm('')
             break;
@@ -92,7 +92,7 @@ const Formtest = () => {
         placeholder='Name*'
         value={name} 
         onChange={(e) => handleChange(e)}></input>
-        {nameError && <p className='error'>Fill in your name, please.</p>}
+        {nameError && <p className='error'><i className="fa-sharp fa-solid fa-triangle-exclamation"></i>Fill in your name, please.</p>}
 
         <input 
         type="email" 
@@ -100,7 +100,7 @@ const Formtest = () => {
         placeholder='Email*' 
         value={email} 
         onChange={(e) => handleChange(e)}></input>
-        {emailError && <p className='error'>Fill in your email, please.</p>}
+        {emailError && <p className='error'><i className="fa-sharp fa-solid fa-triangle-exclamation"></i>Fill in your email, please.</p>}
 
         <textarea 
         type="text" 
@@ -108,7 +108,7 @@ const Formtest = () => {
         placeholder='Your Message*' 
         value={message} 
         onChange={(e) => handleChange(e)}></textarea>
-        {messageError && <p className='error'>You need to write a message first!</p>}
+        {messageError && <p className='error'><i className="fa-sharp fa-solid fa-triangle-exclamation"></i>You need to write a message first!</p>}
 
         <button className='buttons-yellow' type='submit'>Send Message<i className="fa-regular fa-arrow-up-right"></i></button>
         <p className='submitted'>{submitted}</p>
@@ -116,4 +116,4 @@ const Formtest = () => {
   )
 }
 
-export default Formtest
+export default Form

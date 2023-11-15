@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap'); //inter
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700;9..40,900&family=Inter:wght@300;400;500;700;900&display=swap');
 
-// JAG HAR STYLAT MED SCSS
-// MIN GAMLA KOD ÄR GJORD DESKTOP FIRST
-// MIN NYA KOD ÄR GJORD MOBILE FIRST
-
 html, body {
     color: #191919;
     font-family: "Inter", sans-serif;
@@ -432,12 +428,10 @@ header {
 
             } 
             .two-buttons { // 2 knappar 
-                margin-right: 0px;
                 display: flex;
-                margin-bottom: 1.25rem;
+                gap: 1.3rem;
 
                 @media (max-width: 1200px){
-                    gap: 1rem;
                     justify-content: center;
                 }
             }
@@ -1583,8 +1577,9 @@ header {
                 display: flex;
                 justify-content: center;
                 gap: 0.2rem;
-                color:rgb(219, 30, 30);
+                color:rgb(219, 75, 75);
                 font-size: 1.1rem;
+                font-weight: 600;
                 margin: 0;
                 padding: 0;
             }
@@ -1619,17 +1614,25 @@ header {
 }
 
 .error {
-    background-color: rgba(240, 52, 52, 0.548);
-    border-bottom: solid 0.2rem #F94D1C;
+    background-color: rgb(255, 221, 221);
+    border-bottom: solid 0.2rem rgb(248, 179, 179);
+    border-left: solid 0.1rem rgb(252, 184, 184);
+
     border-radius: 30px;
     display: flex;
     justify-content: center;
-    color:rgb(255, 255, 255);
+    color:rgb(204, 32, 32);
     font-weight: 700;
     text-align: center;
     font-size: 0.9rem;
     margin: 0;
-    padding: 0;
+
+    i {
+        padding-top: 0.3rem;
+        padding-right: 0.4rem;
+        font-size: 1.05rem;
+        color:rgb(224, 55, 55);
+    }
 }
 
 .map iframe {
